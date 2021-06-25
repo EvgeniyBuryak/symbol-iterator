@@ -1,1 +1,2 @@
-# Перебираемые объекты Symbol.iterator
+# symbol-iterator
+Примеры Symbol.iterator
