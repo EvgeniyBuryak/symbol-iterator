@@ -69,3 +69,20 @@ alert(arr.toString());
  * */
 arr = Array.from(range, num => num * num);
 alert(arr);
+
+// Превращаем строку в массив элементов
+let strEmodzi = '𝒳😂';
+
+/** преобразуем строку в массив, чтобы
+ *  можно было работать с суррогатными парами
+ *
+ *  let chars = []; // Array.from внутри себя выполняет тот же цикл
+ *  for (let char of str) {
+ *    chars.push(char);
+ *  }
+ *  */
+let chars = Array.from(strEmodzi);
+
+alert(chars[0]);
+alert(chars[1]);
+alert(chars.length);
