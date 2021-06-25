@@ -86,3 +86,15 @@ let chars = Array.from(strEmodzi);
 alert(chars[0]);
 alert(chars[1]);
 alert(chars.length);
+
+// Создаем метод slice, который поддерживает суррогатные пары
+function slice(str, start, end) {
+    return Array.from(str).slice(start, end).join('');
+}
+
+str = '𝒳😂𩷶';
+
+alert(slice(str, 1, 3));
+
+// Встроенный метод slice не поддерживает суррогатные пары
+alert(str.slice(1, 3)); // выведет мусор
