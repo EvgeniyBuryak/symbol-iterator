@@ -1,7 +1,7 @@
 // ниже объясняеться как работает Symbol.iterator
 let range = {
     from: 1,
-    to: 5
+    to: 5,
 }
 
 range[Symbol.iterator] = function () {
@@ -37,3 +37,12 @@ while (true) {
     if (result.done) break;
     console.log(result.value); // выводит символы один за другим
 }
+
+let arrayLike = { // есть индексы и свойство length => псевдомассив
+    0: "Hello",
+    1: "World",
+    length: 2,
+}
+
+// Ошибка (отсутствует Symbol.iterator)
+for (let item of arrayLike) { }
