@@ -61,3 +61,11 @@ alert(arr.pop());
  * */
 arr = Array.from(range);
 alert(arr.toString());
+
+/* полный синтаксис Array.from(obj[, mapFn, thisArg]),
+ * будет mapFn применена к каждому элементу перед добавлением в массив,
+ * thisArg позволяет установить this для этой функции.
+ * Возводим каждое число в квадрат
+ * */
+arr = Array.from(range, num => num * num);
+alert(arr);
