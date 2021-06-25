@@ -23,3 +23,17 @@ range[Symbol.iterator] = function () {
 for (let num of range) {
     console.log(num);
 }
+
+// Явный вызов итератора for..of
+let str = "Hello Web";
+
+// делает то же самое, что и
+// for (let char of str) alert(char);
+
+let iterator = str[Symbol.iterator]();
+
+while (true) {
+    let result = iterator.next();
+    if (result.done) break;
+    console.log(result.value); // выводит символы один за другим
+}
